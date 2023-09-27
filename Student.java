@@ -3,12 +3,12 @@ import java.util.Scanner;
 public class Student {
     
 
-    public Student(String imie, String nazwisko,double ocena, char plec, String kierunek){
+    public Student(String imie, String nazwisko,double ocena, String plec, String kierunek){
 
         WyswietlInformacje();
         ZmienImie(imie);   
         ZmienNazwisko(nazwisko);
-        UstawePlec(plec);
+        UstawPlec(plec);
         ZmienOcene(ocena);
         ZmienKierunek(kierunek);
         SprawdzZaliczenie();
@@ -48,8 +48,8 @@ public class Student {
         nazwisko = noweNazwisko;
     }
 
-    public void UstawePlec(char nowaPlec){
-        plec = nowaPlec;
+    public void UstawPlec(String nowaPlec){
+        plec = nowaPlec.toUpperCase().charAt(0);
     }
 
     public Boolean SprawdzZaliczenie(){
